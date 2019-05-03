@@ -1,0 +1,13 @@
+[Unit]
+Description=hello.js NodeJs Sample App
+Documentation=https://github.com/mbeham/sample-node-app
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/bin/node /home/ubuntu/sample-node-app/index.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
